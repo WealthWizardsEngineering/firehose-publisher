@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "classes": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "no-param-reassign": 0,
+    "no-restricted-syntax": 0,
+    "no-await-in-loop": 0,
+    "global-require": 0,
+    "max-len": 0,
+    "no-plusplus": 0,
+    "no-return-await": 0,
+    "camelcase": 0,
+    "comma-dangle": 0,
+    "function-paren-newline": 0,
+    "operator-linebreak": 0,
+    "indent": 0,
+    "implicit-arrow-linebreak": 0,
+    "prefer-arrow-callback": 0
+  }
+}

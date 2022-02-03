@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: yarn build
+  publish:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: yarn build
+      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run: yarn release
+workflows:
+  version: 2
+  test_builds:
+    jobs:
+      - test
+  tagged_builds:
+    jobs:
+      - publish:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
