@@ -1,11 +1,19 @@
 {
-  "extends": "airbnb-base",
+  "env": {
+    "jest/globals": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "classes": true,
       "experimentalObjectRestSpread": true
     }
   },
+  "plugins": ["jest"],
   "rules": {
     "no-param-reassign": 0,
     "no-restricted-syntax": 0,
