@@ -1,4 +1,4 @@
-# firehose-publisher
+# firehose-publisher [![CircleCI](https://circleci.com/gh/WealthWizardsEngineering/firehose-publisher.svg?style=svg)](https://circleci.com/gh/WealthWizardsEngineering/firehose-publisher)
 
 This is a simple lib that will publish a JSON object to a `Firehose` stream as a gzipped one line string representation (including a newline `\n` at the end).
 
